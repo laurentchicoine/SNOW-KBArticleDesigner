@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope, editorManager, config) {
+	/* widget controller */
+	var lc = this;
+	
+	lc.columnDefaultType = config.columnDefaultType;
+	lc.filterWidget = '';
+	lc.model = {
+		layouts: editorManager.getRowsAndColumns()
+	};
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>widget-layout-picker</id>
+        <internal>false</internal>
+        <link/>
+        <name>Widget and Layout Picker</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-02-19 03:32:08</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>dc52e1d10f897200f52b09ece1050e13</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Widget and Layout Picker</sys_name>
+        <sys_package display_value="Knowledge Article Designer" source="x_27018_ka_design">4eb70bf80f053200f52b09ece1050ea5</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Knowledge Article Designer">4eb70bf80f053200f52b09ece1050ea5</sys_scope>
+        <sys_update_name>sp_widget_dc52e1d10f897200f52b09ece1050e13</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-02-27 22:16:14</sys_updated_on>
+        <template><![CDATA[<div class="filter-element">
+  <input placeholder="Filter Widget" type="text" ng-model="lc.filterWidget" class="form-control" />
+</div>
+<div class="layouts-list" ng-hide="lc.filterWidget.length">
+  <div class="layout-label">Layouts</div>
+  <ul class="dnd-list">
+    <li dnd-copied="lc.draggedToEditor(item)" dnd-type="item.type" dnd-dragstart="lc.dragStart(item)" dnd-draggable="item" dnd-effect-allowed="copy" ng-repeat="item in lc.model.layouts|orderBy:'label'" class="list-item">
+      <div class="item-content icon-drag-dots">
+        <div ng-if="item.type === 'container'" class="rows-table-wrp">
+          <table class="rows-table">
+            <tr>
+              <td class="col-item col-item-12">Container</td>
+            </tr>
+          </table>
+        </div>
+        <div ng-if="item.type === 'row'" class="rows-table-wrp">
+          <table class="rows-table">
+            <tr>
+              <td class="col-item col-item-{{column.size_classes[lc.columnDefaultType]}}" ng-repeat="column in item[lc.rules.row.content]">{{column.size_classes[lc.columnDefaultType]}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="widgets-list" ng-class="{first: (lc.filterWidget.length)}">
+  <div class="layout-label">Widgets</div>
+  <ul class="dnd-list">
+    <li dnd-copied="lc.draggedToEditor(item)" dnd-type="item.type" dnd-dragstart="lc.dragStart(item)" dnd-draggable="item" dnd-effect-allowed="copy" ng-repeat="item in lc.model.widgets|orderBy:'label'|filter:lc.filterWidget" class="list-item item-hover-menu">
+      <div class="item-content icon-drag-dots">
+        <span>{{::item.label}}</span>
+        <div class="item-edit icon-edit" ng-click="lc.editWidget(item)">
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>]]></template>
+    </sp_widget>
+</record_update>

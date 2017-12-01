@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Widget Instance" max_length="40" name="x_27018_ka_design_widget_instance" type="collection"/>
+</database>

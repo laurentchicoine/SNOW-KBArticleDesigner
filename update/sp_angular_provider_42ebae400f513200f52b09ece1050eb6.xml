@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_angular_provider">
+    <sp_angular_provider action="INSERT_OR_UPDATE">
+        <name>kadConfig</name>
+        <script><![CDATA[(function(){
+	'use strict';
+	angular.module('kad_config', []).constant('config', {
+		column: {
+			type: 'column',
+			size_classes: {},
+			content: []
+		},
+		columnDefaultType: 'md',
+		columnDefaultSize: 1,
+		columnSizes: ['12', '6-6', '3-9', '9-3', '3-6-3', '4-4-4', '3-3-3-3', '2-2-2-2-2-2'],
+		columnMaxSize: 12,
+		columnTypes: [{key: 'xs', label: 'Phone'}, {key: 'sm', label: 'Tablet'}, {key: 'md', label: 'Desktop'}, {key: 'lg', label: 'Large Desktop'}],
+		columnSizeTpl: 'col-{type}-{size}',
+		container: {
+			type: 'container',
+			width: 'container',
+			plusButton: true,
+			rows: []
+		},
+		row: {
+			label: 'row',
+			content: 'columns',
+			allowedTypes: ['column'],
+			li: 'rows-list',
+			ul: 'row',
+			fields: ['sys_id']
+		},
+		rules: {
+			row: {
+				label: 'row',
+				content: 'columns',
+				allowedTypes: ['column'],
+				li: 'rows-list',
+				ul: 'row',
+				fields: ['sys_id']
+			}
+		}
+	});
+}());]]></script>
+        <sys_class_name>sp_angular_provider</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-02-27 21:52:58</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>42ebae400f513200f52b09ece1050eb6</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>kadConfig</sys_name>
+        <sys_package display_value="Knowledge Article Designer" source="x_27018_ka_design">4eb70bf80f053200f52b09ece1050ea5</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Knowledge Article Designer">4eb70bf80f053200f52b09ece1050ea5</sys_scope>
+        <sys_update_name>sp_angular_provider_42ebae400f513200f52b09ece1050eb6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-02-27 22:10:01</sys_updated_on>
+        <type>factory</type>
+    </sp_angular_provider>
+</record_update>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Knowledge Article" max_length="40" name="x_27018_ka_design_knowledge_article" type="collection"/>
+</database>

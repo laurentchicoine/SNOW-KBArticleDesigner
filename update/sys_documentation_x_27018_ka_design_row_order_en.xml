@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="order" label="Order" language="en" table="x_27018_ka_design_row">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>order</element>
+            <help/>
+            <hint/>
+            <label>Order</label>
+            <language>en</language>
+            <name>x_27018_ka_design_row</name>
+            <plural>Orders</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-02-17 22:06:22</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_id>533f03f40f853200f52b09ece1050e6f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Order</sys_name>
+            <sys_package display_value="Knowledge Article Designer" source="x_27018_ka_design">4eb70bf80f053200f52b09ece1050ea5</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Knowledge Article Designer">4eb70bf80f053200f52b09ece1050ea5</sys_scope>
+            <sys_update_name>sys_documentation_x_27018_ka_design_row_order_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-02-17 22:06:22</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

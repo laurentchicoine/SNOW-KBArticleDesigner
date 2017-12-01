@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Container" max_length="40" name="x_27018_ka_design_container" type="collection">
+        <element label="Knowledge article" max_length="32" name="knowledge_article" reference="x_27018_ka_design_knowledge_article" type="reference"/>
+        <element label="Order" max_length="40" name="order" type="integer"/>
+        <index name="index">
+            <element name="knowledge_article"/>
+        </index>
+    </element>
+</database>

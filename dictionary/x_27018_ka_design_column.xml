@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Column" max_length="40" name="x_27018_ka_design_column" type="collection">
+        <element label="Order" max_length="40" name="order" type="integer"/>
+        <element label="Row" max_length="32" name="row" reference="x_27018_ka_design_row" type="reference"/>
+        <element label="Size - lg" max_length="40" name="size_lg" type="integer"/>
+        <element label="Size - md" max_length="40" name="size_md" type="integer"/>
+        <element label="Size - sm" max_length="40" name="size_sm" type="integer"/>
+        <element label="Size - xs" max_length="40" name="size_xs" type="integer"/>
+        <index name="index">
+            <element name="row"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Row" max_length="40" name="x_27018_ka_design_row" type="collection">
+        <element label="Container" max_length="32" name="container" reference="x_27018_ka_design_container" type="reference"/>
+        <element label="Order" max_length="40" name="order" type="integer"/>
+        <index name="index">
+            <element name="container"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element attributes="update_synch=true" extends="sys_metadata" label="Widget" max_length="40" name="x_27018_ka_design_widget" type="collection">
+        <element label="Client script" max_length="8000" name="client_script" type="script"/>
+        <element label="CSS" max_length="4000" name="css" type="css"/>
+        <element label="Demo data" max_length="4000" name="demo_data" type="json"/>
+        <element label="Render script" max_length="8000" name="render_script" type="script"/>
+        <element default="&lt;div&gt;&lt;!-- your widget template --&gt;&lt;/div&gt;" label="Body HTML template" max_length="8000" name="template" type="html_template"/>
+    </element>
+</database>
